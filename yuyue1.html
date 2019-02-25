@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="js/mui.picker.min.js"></script>
+    <script src="js/data.city.js"></script>
+    <script src="js/layout.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/mui.picker.css" rel="stylesheet"/>
+    <link href="css/master.css" rel="stylesheet"/>
+    <link href="css/layout.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+		$(function(){
+			$(".zd_danglist li").click(function(){
+				$(this).toggleClass("active")
+				})
+			})
+    </script>
+</head>
+<body>
+    <header class="mui-bar mui-bar-nav zd_title-top">
+    	<div class="mui-title zd_color-100">服务对象</div>
+    </header>
+    <div class="mui-content mui-scroll-wrapper zd_title-bot">
+        <div class="mui-scroll">
+                <div class="zd_title">请选择服务对象</div>   
+                  <ul class="zd_danglist" style="padding-bottom:0">
+                 <li class="padding-bottom-5 active">
+                     <img src="images/photo1.png">
+                     <div class="mui-row margin-bottom-10 margin-top-5">
+                         <div class="mui-col-sm-4 mui-col-xs-4"><span class="margin-left-20">张无忌</span></div>
+                         <div class="mui-col-sm-8 mui-col-xs-8"><span>13688888888</span></div>
+                     </div>
+                     <div class="zd_color-60 margin-left-20 margin-bottom-10 zd_font-15 padding-right-10">四川成都市高新区天府三街新希望国际B座1603</div>
+                 </li>
+                 <li  class="padding-bottom-5">
+                     <img src="images/photo1.png">
+                     <div class="mui-row margin-bottom-10 margin-top-5">
+                         <div class="mui-col-sm-4 mui-col-xs-4"><span class="margin-left-20">张无忌</span></div>
+                         <div class="mui-col-sm-8 mui-col-xs-8"><span>13688888888</span></div>
+                     </div>
+                     <div class="zd_color-60 margin-left-20 margin-bottom-10 zd_font-15 padding-right-10">四川成都市高新区天府三街新希望国际B座1603</div>
+                 </li>
+             </ul>
+                     
+             
+                 <div class="mui-button-row  zd_inlinebtn">
+                     <button class="mui-btn margin-right-10">返回</button>
+                     <button class="mui-btn zd_btn-blue" onClick="document.location='yuyue2.html'">下一步</button>
+                 </div>
+        </div>
+    </div>
+    
+</body>
+</html>

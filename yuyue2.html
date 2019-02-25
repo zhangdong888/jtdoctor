@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="js/mui.picker.min.js"></script>
+    <script src="js/data.item.js"></script>
+    <script src="js/layout.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/mui.picker.css" rel="stylesheet"/>
+    <link href="css/master.css" rel="stylesheet"/>
+    <link href="css/layout.css" rel="stylesheet"/>
+    <style>
+    .b1 span{ display:inline; float:none; width:auto}
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+		$(function(){
+			 var dtpicker = new mui.DtPicker({"type":"date"});
+				$(".b4").on("tap", function(){
+						dtpicker.show(function(items){
+							$(".b4").html(items.text);
+						});
+				});
+				var tmpicker = new mui.DtPicker({"type":"time"});
+				$(".b5").on("tap", function(){
+						tmpicker.show(function(items){
+							$(".b5").html(items.text);
+						});
+				});
+				var item_name = new mui.PopPicker({ layer: 1});
+					item_name.setData(item_names);
+				$(".b1").on("tap", function(){
+							item_name.show(function(items){
+								var n=$(".b1").text()
+								var m=items[0].text
+								var z='<span style="display:block;float:left;width:50%">待沟通确认</span>'
+								if(n.search(/待沟通确认/)==-1){
+									if(m==z){
+										$(".b1").html(m+" ");
+										}
+										else{
+											$(".b1").append(m+" ");
+											}
+									}
+								else{
+									$(".b1").html(m+" ");
+									}
+									$(".b1 span").css({"display":"inline","float":"none"})
+									$(".b1 span:odd").hide()	
+								
+							});
+					});
+				$(".b2").click(function(){
+					mui('#sheet2').popover('toggle');
+					})
+				$("#sheet2 a").click(function(){
+					var n=$(this).text()
+					$(".b2").html(n)
+					mui('#sheet2').popover('hide');
+					})
+				$(".b3").click(function(){
+					mui('#sheet3').popover('toggle');
+					})
+				$("#sheet3 a").click(function(){
+					var n=$(this).text()
+					$(".b3").html(n)
+					mui('#sheet3').popover('hide');
+					})
+
+			})
+    </script>
+</head>
+<body>
+    <header class="mui-bar mui-bar-nav zd_title-top">
+    	<div class="mui-title zd_color-100">生成订单</div>
+    </header>
+    <div class="mui-content mui-scroll-wrapper zd_title-bot">
+        <div class="mui-scroll">
+                <div class="zd_title">主诉</div>   
+                    <div class="mui-content zd_list-content zd_border-bot" style="padding:0">
+                        <div class="mui-row" style="border:none">
+                            <div class="mui-col-sm-12 mui-col-xs-12">
+                               <li class="mui-table-view-cell">
+                               <textarea placeholder="请描述：您此次订单想要解决的问题" rows="4"></textarea>
+                               </li>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="mui-content zd_list-content zd_border-bot zd_border-top margin-top-10">
+                        <div class="mui-row">
+                            <div class="mui-col-sm-4 mui-col-xs-4">
+                                <li class="mui-table-view-cell">服务项目</li>
+                            </div>
+                            <div class="mui-col-sm-8 mui-col-xs-8">
+                                <li class="mui-table-view-cell"><a class="mui-navigate-right b1" >待沟通确认</a></li>
+                            </div>
+                        </div>
+                        <div class="mui-row">
+                            <div class="mui-col-sm-4 mui-col-xs-4">
+                                <li class="mui-table-view-cell">业务类型</li>
+                            </div>
+                            <div class="mui-col-sm-8 mui-col-xs-8">
+                                <li class="mui-table-view-cell"><a class="mui-navigate-right b2">上门服务</a></li>
+                            </div>
+                        </div>
+                         <div class="mui-row"  style="border:none">
+                            <div class="mui-col-sm-4 mui-col-xs-4">
+                                <li class="mui-table-view-cell">医生</li>
+                            </div>
+                            <div class="mui-col-sm-8 mui-col-xs-8">
+                                <li class="mui-table-view-cell"><a class="mui-navigate-right b3">自动分配</a></li>
+                            </div>
+                        </div>
+                     </div>
+                     <div class="mui-content zd_list-content zd_border-bot zd_border-top margin-top-10">
+                        <div class="mui-row">
+                            <div class="mui-col-sm-4 mui-col-xs-4">
+                                <li class="mui-table-view-cell">预约日期</li>
+                            </div>
+                            <div class="mui-col-sm-8 mui-col-xs-8">
+                                <li class="mui-table-view-cell"><a class="mui-navigate-right b4">2018-05-02</a></li>
+                            </div>
+                        </div>
+                        <div class="mui-row"  style="border:none">
+                            <div class="mui-col-sm-4 mui-col-xs-4">
+                                <li class="mui-table-view-cell">预约时间</li>
+                            </div>
+                            <div class="mui-col-sm-8 mui-col-xs-8">
+                                <li class="mui-table-view-cell"><a class="mui-navigate-right b5">12：00</a></li>
+                            </div>
+                        </div>
+                     </div>
+             
+                 <div class="mui-button-row margin-top-10 zd_inlinebtn">
+                     <button class="mui-btn margin-right-10" onClick="document.location='yuyue1.html'">上一步</button>
+                     <button class="mui-btn zd_btn-blue" onclick="document.location='yuyue3.html'">下一步</button>
+                 </div>
+        </div>
+    </div>
+    <div id="sheet1" class="mui-popover mui-popover-bottom mui-popover-action">
+        <ul class="mui-table-view">
+                      <li class="mui-table-view-cell">
+                          <div class="mui-input-row  mui-checkbox mui-left">
+                           <label>待沟通后确认</label>
+                            <input name="checkbox1" value="Item 1" type="checkbox" checked>
+                          </div>
+                      </li>
+                      <li class="mui-table-view-cell">
+                          <div class="mui-input-row  mui-checkbox mui-left">
+                           <label>一般体检</label>
+                            <input name="checkbox1" value="Item 1" type="checkbox">
+                          </div>
+                      </li>
+                      <li class="mui-table-view-cell">
+                          <div class="mui-input-row  mui-checkbox mui-left">
+                           <label>动态心电检测</label>
+                            <input name="checkbox1" value="Item 1" type="checkbox">
+                          </div>
+                      </li>
+                  </ul>
+        <ul class="mui-table-view">
+          <li class="mui-table-view-cell">
+            <a href="#sheet1"><b>取消</b></a>
+          </li>
+        </ul>
+    </div>
+    <div id="sheet2" class="mui-popover mui-popover-bottom mui-popover-action">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">
+              <a href="#">上门服务</a>
+            </li>
+            <li class="mui-table-view-cell">
+              <a href="#">送药到家</a>
+            </li>
+            <li class="mui-table-view-cell">
+              <a href="#">预约陪检</a>
+            </li>
+            <li class="mui-table-view-cell">
+              <a href="#">电话咨询</a>
+            </li>
+        </ul>
+        <ul class="mui-table-view">
+          <li class="mui-table-view-cell">
+            <a href="#sheet2"><b>取消</b></a>
+          </li>
+        </ul>
+    </div>
+    <div id="sheet3" class="mui-popover mui-popover-bottom mui-popover-action">
+        <ul class="mui-table-view">
+            <li class="mui-table-view-cell">
+              <a href="#">自动分配</a>
+            </li>
+            <li class="mui-table-view-cell">
+              <a href="#">李医生</a>
+            </li>
+            <li class="mui-table-view-cell">
+              <a href="#">王医生</a>
+            </li>
+        </ul>
+        <ul class="mui-table-view">
+          <li class="mui-table-view-cell">
+            <a href="#sheet3"><b>取消</b></a>
+          </li>
+        </ul>
+    </div>
+
+</body>
+</html>

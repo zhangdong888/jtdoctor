@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="js/mui.picker.min.js"></script>
+    <script src="js/data.city.js"></script>
+    <script src="js/layout.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/mui.picker.css" rel="stylesheet"/>
+    <link href="css/master.css" rel="stylesheet"/>
+    <link href="css/layout.css" rel="stylesheet"/>
+    <link href="css/lCalendar.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+		$(function(){
+				var picker = new mui.PopPicker({ layer: 3});
+					picker.setData(init_city_picker);
+				$(".a3").on("tap", function(){
+							picker.show(function(items){
+								$(".a3").html((items[0] || {}).text + " " + (items[1] || {}).text + " " + (items[2] || {}).text);
+							});
+					});
+			})
+    </script>
+</head>
+<body>
+    <div class="zd_title">请填写现住址</div>   
+    <div class="mui-content zd_list-content zd_border-bot">
+        <div class="mui-row">
+            <div class="mui-col-sm-3 mui-col-xs-3">
+            	<li class="mui-table-view-cell">地址</li>
+            </div>
+            <div class="mui-col-sm-9 mui-col-xs-9">
+            	<li class="mui-table-view-cell"><a class="mui-navigate-right a3">地区信息</a></li>
+            </div>
+        </div>
+        
+        <div class="mui-row" style="border:none">
+            <div class="mui-col-sm-3 mui-col-xs-3">
+            	<li class="mui-table-view-cell">详细</li>
+            </div>
+            <div class="mui-col-sm-9 mui-col-xs-9">
+            	<li class="mui-table-view-cell"><input type="text" placeholder="街道门牌信息"></li>
+            </div>
+        </div>
+    </div>
+     
+         <div class="mui-button-row margin-top-10 zd_inlinebtn">
+             <button class="mui-btn margin-right-10" onClick="document.location='huiyuan.html'">返回</button>
+             <button class="mui-btn zd_btn-blue">保存</button>
+         </div>
+     
+    
+
+</body>
+</html>

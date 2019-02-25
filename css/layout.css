@@ -1,0 +1,76 @@
+@charset "utf-8";
+/* CSS Document */
+*{ font-style:normal; list-style:none; margin:0; padding:0}
+:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+    color: #000; opacity:0.4; 
+}
+
+::-moz-placeholder { /* Mozilla Firefox 19+ */
+    color: #000;opacity:0.4;
+}
+
+input:-ms-input-placeholder{
+    color: #000;opacity:0.4;
+}
+
+input::-webkit-input-placeholder{
+    color: #000;opacity:0.4;
+}
+textarea:-ms-input-placeholder{
+    color: #000;opacity:0.4;
+}
+
+textarea::-webkit-input-placeholder{
+    color: #000;opacity:0.4;
+}
+/*bgStyle*/
+.zd_bgwhite{ background-color:#fff}
+
+/*btnStyle*/
+.zd_btn-blue{background-color:#0d87e4; color:#fff; border:none; cursor:pointer;}
+.zd_addbtn{ background:url(../images/add.png) center no-repeat; background-size:100%; width:24px; height:24px; background-color:transparent; border:none; display:inline-block; cursor:pointer}
+
+/*fontStyle*/
+.zd_font-15{ font-size:15px}
+.zd_font-18{ font-size:18px}
+.zd_font-20{ font-size:20px}
+.zd_color-60{ color:#999999}
+.zd_color-100{ color:#fff}
+.zd_color-blue{color:#0d87e4}
+.zd_color-red{ color:red}
+.font-weight{font-weight:bold;}
+.text-indent-30{ text-indent:30px}
+.zd_text-content{ text-indent:30px; padding:0 10px; line-height:1.5; text-align:justify; font-size:16px}
+
+/*PaddingStyle*/
+.padding-5{ padding:5px}
+.padding-left-5{padding-left:5px;}
+.padding-left-10{padding-left:10px;}
+.padding-right-5{padding-right:5px;}
+.padding-right-10{padding-right:10px;}
+.padding-left-20{ padding-left:20px}
+.padding-right-20{padding-right:20px;}
+.padding-top-5{padding-top:5px;}
+.padding-top-10{padding-top:10px;}
+.padding-bottom-5{padding-bottom:5px;}
+.padding-bottom-10{padding-bottom:10px;}
+
+/*MaginStyle*/
+.margin-left-5{margin-left:5px;}
+.margin-left-10{margin-left:10px;}
+.margin-left-20{margin-left:20px;}
+.margin-right-5{margin-right:5px;}
+.margin-right-10{margin-right:10px;}
+.margin-right-20{margin-right:20px;}
+.margin-top-5{margin-top:5px;}
+.margin-top-10{margin-top:10px;}
+.margin-bottom-5{margin-bottom:5px;}
+.margin-bottom-10{margin-bottom:10px;}
+
+/*PaddingStyle*/
+.zd_border{ border:1px solid #ccc}
+.zd_border-bot{ border-bottom:1px solid #ccc}
+.zd_border-top{ border-top:1px solid #ccc}
+
+
+

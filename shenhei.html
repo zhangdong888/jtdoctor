@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no"/>
+    <title></title>
+    <script src="js/jquery-1.7.2.min.js"></script>
+    <script src="js/mui.min.js"></script>
+    <script src="js/mui.picker.min.js"></script>
+    <script src="js/data.city.js"></script>
+    <script src="js/layout.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+    <link href="css/mui.picker.css" rel="stylesheet"/>
+    <link href="css/master.css" rel="stylesheet"/>
+    <link href="css/layout.css" rel="stylesheet"/>
+    <script type="text/javascript" charset="utf-8">
+      	mui.init();
+		$(function(){
+			   var dtpicker = new mui.DtPicker({"type":"date"});
+				$(".c1").on("tap", function(){
+						dtpicker.show(function(items){
+							$(".c1").html(items.text);
+						});
+				});
+				var tmpicker = new mui.DtPicker({"type":"time"});
+				$(".c2").on("tap", function(){
+						tmpicker.show(function(items){
+							$(".c2").html(items.text);
+						});
+				});
+				$(".c3").on("tap", function(){
+						mui('#sheet1').popover('toggle');
+				});
+				$("#sheet1 a").click(function(){
+					var n=$(this).text()
+					$(".c3").html(n)
+					mui('#sheet1').popover('hide');
+					})
+			})
+			
+    </script>
+</head>
+<body>
+ <div class="mui-inner-wrap">
+    <header class="mui-bar mui-bar-nav zd_title-top">
+    	<div class="mui-title zd_color-100">待审核订单</div>
+    </header>
+    <div class="mui-content mui-scroll-wrapper zd_title-bot">
+        <div class="mui-scroll">
+                <div class="zd_title1"><span class="zd_phboy">张无忌</span><span>男</span><span>24岁</span><span>13666666666</span></div>
+                <div class="zd_title">主诉</div>   
+                    <div class="mui-content zd_list-content zd_border-bot" style="padding:0">
+                        <div class="mui-row" style="border:none">
+                            <div class="mui-col-sm-12 mui-col-xs-12">
+                               <li class="mui-table-view-cell padding-5">
+                               <div class="zd_text-content">一周前患者受凉后再次出现咳嗽、咳痰加重，为黄白色黏痰，体温最高可达39℃。</div>
+                               </li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="zd_title">服务清单</div> 
+                   <ul class="mui-table-view zd_list-content1">
+                        <li class="mui-table-view-cell"><div class="mui-row"><span class="mui-col-xs-8">一般体检</span><span class="mui-col-xs-4 mui-text-right padding-right-10">￥100</span></div></li>
+                        <li class="mui-table-view-cell"><div class="mui-row"><span class="mui-col-xs-8">动态心电检测</span><span class="mui-col-xs-4 mui-text-right padding-right-10">￥100</span></div></li>
+                        <li class="mui-table-view-cell"><div class="mui-row"><span class="mui-col-xs-8">彩超</span><span class="mui-col-xs-4 mui-text-right padding-right-10">￥100</span></div></li>
+                        <li class="mui-table-view-cell"><div class="mui-row"><span class="mui-col-xs-8">人员服务费</span><span class="mui-col-xs-4 mui-text-right padding-right-10">￥60</span></div></li>
+                        <li class="mui-table-view-cell"><div class="mui-row"><span class="mui-col-xs-8">里程费</span><span class="mui-col-xs-4 mui-text-right padding-right-10">￥60</span></div></li>
+                        <li class="mui-table-view-cell" style="background:none"><div class="mui-row"><span class="mui-col-xs-8">合计</span><span class="mui-col-xs-4 mui-text-right padding-right-10 zd_color-blue">￥420</span></div></li>
+                    </ul>
+                    <div class="zd_title">预约上门</div> 
+                     <ul class="mui-table-view">
+                        <li class="mui-table-view-cell"><div class="mui-row"><span class="mui-col-xs-4 mui-col-sm-4">上门人员</span><span class="mui-col-xs-8  mui-col-sm-8">李医生</span></div></li>
+                        <li class="mui-table-view-cell"><div class="mui-row"><span class="mui-col-xs-4 mui-col-sm-4">住址</span><span class="mui-col-xs-8  mui-col-sm-8">成都市天府三街新希望国际B座1603</span></div></li>
+                        <li class="mui-table-view-cell"><div class="mui-row"><span class="mui-col-xs-4 mui-col-sm-4">预约时间</span><span class="mui-col-xs-8  mui-col-sm-8">2018年4月20日 10：00</span></div></li>
+                      
+                    </ul>
+                    <div class="zd_title">审核备注</div>   
+                    <div class="mui-content zd_list-content zd_border-bot" style="padding:0">
+                        <div class="mui-row" style="border:none">
+                            <div class="mui-col-sm-12 mui-col-xs-12">
+                               <li class="mui-table-view-cell">
+                               <textarea rows="4"></textarea>
+                               </li>
+                            </div>
+                        </div>
+                    </div> 
+                 <div class="mui-button-row margin-top-10 zd_inlinebtn">
+                     <button class="mui-btn margin-right-10">驳回</button>
+                     <button class="mui-btn zd_btn-blue" onClick="document.location='yishenhei.html'">通过审核</button>
+                 </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
